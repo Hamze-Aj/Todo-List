@@ -1,1 +1,93 @@
-<head><script defer src="main.js"></script></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script defer src="main.js"></script></head>
+<body>
+    <header><h1>TODO-LIST</h1></header>
+    <div class="container">
+        <div class="sidebar">
+            <h2>PROJECTS</h2>
+            <div class="projects"></div>
+            <button id="btn">+ add a project</button>
+        </div>
+        <div class="content">
+        </div>
+        <div class="todos"></div>
+        
+        <dialog id="taskDialog" draggable="true">
+            <form method="dialog" class="dialog-form">
+              <h2>Create a New Task</h2>
+              <label for="title">Title</label>
+              <input type="text" id="title" name="title" placeholder="Enter task title" required>
+          
+              <label for="description">Description</label>
+              <textarea id="description" name="description" rows="4" placeholder="Enter task description" required></textarea>
+          
+              <label for="date">Date</label>
+              <input type="date" id="date" name="date" required>
+          
+              <label for="priority">Priority</label>
+              <select id="priority" name="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+          
+              <div class="dialog-buttons">
+                <button type="submit" id="saveTask">Save</button>
+                <button type="button" id="cancelDialog">Cancel</button>
+              </div>
+            </form>
+          </dialog>
+          
+          <dialog id="task-dialog" style="
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    background: #f9f9f9;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <form method="dialog" style="margin: 0;">
+        <h2 id="task-dialog-title" style="
+            margin: 0 0 15px;
+            font-size: 1.6rem;
+            color: #333;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 5px;">
+            Task Title
+        </h2>
+        <p id="task-dialog-description" style="margin: 10px 0; color: #555;">Task Description</p>
+        <p style="margin: 10px 0; color: #555;">
+            <strong style="color: #333;">Due Date:</strong>
+            <span id="task-dialog-duedate">2024-12-31</span>
+        </p>
+        <p style="margin: 10px 0; color: #555;">
+            <strong style="color: #333;">Priority:</strong>
+            <span id="task-dialog-priority">High</span>
+        </p>
+        <button id="task-dialog-close" value="close" style="
+            background-color: #e0e0e0;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;">
+            Close
+        </button>
+    </form>
+</dialog>
+
+        
+          
+    </div>
+    <footer><p>Created by Hamze-Aj</p></footer>
+
+</body>
+</html>
